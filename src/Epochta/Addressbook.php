@@ -1,4 +1,5 @@
 <?php
+namespace Maksimusyan\SmsSender\Epochta;
 class Addressbook{
 	private $gateway=NULL;
 

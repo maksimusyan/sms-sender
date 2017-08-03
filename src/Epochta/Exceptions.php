@@ -1,4 +1,5 @@
 <?php
+namespace Maksimusyan\SmsSender\Epochta;
 class Exceptions{
 	private $gateway=NULL;
 
