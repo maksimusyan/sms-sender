@@ -1,3 +1,12 @@
-# Sms Sender
+Sms Sender
+========
 Sending sms via api Epochta
-WARNING! NOT WORKING!
+
+Library is published on the Composer: https://packagist.org/packages/maksimusyan/sms-sender
+```php
+{
+    "require": {
+        "maksimusyan/sms-sender":"dev-master",
+    }
+}
+```
