@@ -6,14 +6,14 @@ class SmsSender
     protected $driver;
     protected $config;
 
-    public function __construct($driver='Epochta',array $config=array())
+    public function __construct()
     {
-        $this->driver = $driver;
-        $this->config = $config;
-        $this->init();
+
     }
 
-    public function init(){
+    public function init($driver='Epochta',array $config=array()){
+        $this->driver = $driver;
+        $this->config = $config;
         switch ($this->driver) {
             case 'Epochta':
                 return new Epochta\Epochtasms($this->config);
