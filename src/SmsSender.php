@@ -3,7 +3,7 @@ namespace Maksimusyan\SmsSender;
 
 class SmsSender
 {
-    protected $driver;
+    protected $provider;
     protected $config;
 
     public function __construct()
@@ -11,10 +11,10 @@ class SmsSender
 
     }
 
-    public function init($driver='Epochta',array $config=array()){
-        $this->driver = $driver;
+    public function init($provider='Epochta',array $config=array()){
+        $this->provider = $provider;
         $this->config = $config;
-        switch ($this->driver) {
+        switch ($this->provider) {
             case 'Epochta':
                 return new Epochta\Epochtasms($this->config);
                 break;

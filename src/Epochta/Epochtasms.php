@@ -61,7 +61,6 @@ class Epochtasms implements SmsSender\ISender
     }
 
     public function getBalance($currency='RUB'){
-        // Проверяем баланс счета
         // Доступные валюты: 'USD','GBP','UAH','RUB','EUR'.
         $result = $this->account->getUserBalance($currency);
         if(!empty($result['error'])) {
