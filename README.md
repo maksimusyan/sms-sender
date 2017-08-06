@@ -22,9 +22,7 @@ $config = array(
     //,'testmode' => false
 );
 
-$sms = new \Maksimusyan\SmsSender();
-// $sms->init() return provider class (Epochta, etc.)
-$smsSender = $sms->init($provider,$config);
+$sms = new \Maksimusyan\SmsSender\Sender($provider,$config);
 ```
 
 API methods
@@ -40,13 +38,19 @@ $data = array(
     'datetime' => '2018-05-01 00:20:00', // Sending at the set time
     'sms_lifetime' => '0' //SMS life time (0 = maximum, 1, 6, 12, 24 hour)
 );
-$smsSender->sendSMS($data);
+$sms->sendSMS($data);
 ```
 
 Get balance:
 
 ```php
 $currency = 'RUB'; // Available currencies: 'USD','GBP','UAH','RUB','EUR'
-$balance = $smsSender->getBalance($currency);
+$balance = $sms->getBalance($currency);
+```
+
+Get country codes:
+
+```php
+$countries = $sms->getCountryCodes();
 ```
 #
