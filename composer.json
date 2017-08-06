@@ -1,6 +1,5 @@
 {
     "name": "maksimusyan/sms-sender",
-    "type": "library",
     "description": "Sending sms via api Epochta.",
     "keywords": ["sms", "epochta"],
     "homepage": "https://github.com/maksimusyan/sms-sender",
@@ -18,6 +17,5 @@
         "psr-4": {
             "SmsSender\\": "src"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

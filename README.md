@@ -5,8 +5,14 @@ Sending sms via api Epochta
 Library is published on the Composer: https://packagist.org/packages/maksimusyan/sms-sender
 ```php
 {
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git://github.com/maksimusyan/sms-sender.git"
+    }
+  ],
     "require": {
-        "maksimusyan/sms-sender":"dev-master",
+        "maksimusyan/sms-sender": "dev-master"
     }
 }
 ```
