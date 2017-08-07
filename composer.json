@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Maksimusyan\\": "src"
+            "Maksimusyan\\SmsSender\\": "src/"
         }
     }
 }

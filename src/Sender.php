@@ -3,7 +3,7 @@ namespace Maksimusyan\SmsSender;
 
 class Sender implements ISender
 {
-    protected $provider;
+    protected $provider = null;
     protected $config;
 
     public function __construct($provider_name='Epochta',array $config=array())
@@ -13,9 +13,13 @@ class Sender implements ISender
             case 'Epochta':
                 $this->provider = new Epochta\Epochtasms($this->config);
                 break;
-            default:
-                // new Exeption
-                break;
+        }
+        $this->init();
+    }
+
+    protected function init(){
+        if(null === $this->provider){
+            throw new \Exception("Could not connect to the database");
         }
     }
 

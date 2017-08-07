@@ -1,14 +1,9 @@
 <?php
 namespace Maksimusyan\SmsSender\Epochta;
-//include("APISMS.php");
-//include("Addressbook.php");
-//include("Exceptions.php");
-//include("Account.php");
-//include("Stat.php");
 
-use Maksimusyan\SmsSender;
+use Maksimusyan\SmsSender\ISender;
 
-class Epochtasms implements SmsSender\ISender
+class Epochtasms implements ISender
 {
     public $transport;
     public $addressbook;
