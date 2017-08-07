@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace Maksimusyan\SmsSender\Epochta;
 class Stat{
     private $gateway=NULL;

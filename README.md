@@ -3,6 +3,18 @@ Sms Sender
 Sending sms via api Epochta
 
 Library is published on the Composer: https://packagist.org/packages/maksimusyan/sms-sender
+
+Connect a stable version through the Composer:
+
+> composer require maksimusyan/sms-sender
+```php
+{
+    "require": {
+        "maksimusyan/sms-sender": "^1.2"
+    }
+}
+```
+or the developer version directly from github:
 ```php
 {
   "repositories": [
@@ -18,7 +30,7 @@ Library is published on the Composer: https://packagist.org/packages/maksimusyan
 ```
 
 Basic Usage:
-
+-------
 ```php
 $provider = 'Epochta';
 $config = array(
