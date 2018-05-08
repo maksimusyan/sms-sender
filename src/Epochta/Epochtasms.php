@@ -1,4 +1,5 @@
 <?php
+
 namespace Maksimusyan\SmsSender\Epochta;
 
 use Maksimusyan\SmsSender\ISender;

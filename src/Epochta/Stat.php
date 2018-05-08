@@ -1,6 +1,9 @@
 <?php
+
 namespace Maksimusyan\SmsSender\Epochta;
-class Stat{
+
+class Stat
+{
     private $gateway=NULL;
 
    	function __construct($gateway){
