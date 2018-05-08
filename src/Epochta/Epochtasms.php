@@ -13,7 +13,7 @@ class Epochtasms implements ISender
     public $config = array(
         'key_private' => '',
         'key_public' => '',
-        'url_gateway' => 'http://api.atompark.com/sms/3.0/',
+        'url_gateway' => 'http://atompark.com/api/sms/3.0/',
         'testmode' => false,
     );
 
@@ -33,9 +33,8 @@ class Epochtasms implements ISender
         $result = $this->account->registerSender($name,$country_code);
         if(!empty($result['error'])) {
             return $result['error'];
-        } else {
-            return $result;
         }
+        return $result;
     }
 
     public function sendSMS(array $data){
@@ -50,9 +49,8 @@ class Epochtasms implements ISender
         $result = $this->stat->sendSMS($data['sender'],$data['text'],$data['phone'],$data['datetime'],$data['sms_lifetime']);
         if(!empty($result['error'])) {
             return $result['error'];
-        } else {
-            return $result['result'];
         }
+        return $result['result'];
     }
 
     public function getBalance($currency='RUB'){
@@ -60,9 +58,8 @@ class Epochtasms implements ISender
         $result = $this->account->getUserBalance($currency);
         if(!empty($result['error'])) {
             return $result['error'];
-        } else {
-            return $result['result']['balance_currency'];
         }
+        return $result['result']['balance_currency'];
     }
 
 }

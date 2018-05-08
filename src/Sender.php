@@ -19,7 +19,7 @@ class Sender implements ISender
 
     protected function init(){
         if(null === $this->provider){
-            throw new \Exception("Could not connect to the database");
+            throw new \RuntimeException("Could not connect to the database");
         }
     }
 
